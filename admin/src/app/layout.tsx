@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
 import "@mantine/core/styles.css";
+import "./globals.css";
 
 import { ColorSchemeScript, mantineHtmlProps } from "@mantine/core";
 import { AppLayout } from "@/layouts";
@@ -33,7 +33,7 @@ export default function RootLayout({
         <ColorSchemeScript defaultColorScheme="dark" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background-secondary-dark`}
       >
         <AppLayout>{children}</AppLayout>
       </body>

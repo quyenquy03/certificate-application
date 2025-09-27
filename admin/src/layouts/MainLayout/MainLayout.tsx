@@ -6,9 +6,9 @@ type MainLayoutProps = {
 };
 export const MainLayout = ({ children }: MainLayoutProps) => {
   return (
-    <div>
+    <div className="flex gap-2 min-h-screen">
       <Sidebar />
-      {children}
+      <div>{children}</div>
     </div>
   );
 };

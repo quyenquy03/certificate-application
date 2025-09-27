@@ -1,4 +1,4 @@
 const AdminDashboardPage = () => {
-  return <div>Admin Dashboard</div>;
+  return <div className="bg-red-100">Admin Dashboard</div>;
 };
 export default AdminDashboardPage;

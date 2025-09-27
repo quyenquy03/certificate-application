@@ -3,6 +3,7 @@ import defaultTheme from "tailwindcss/defaultTheme";
 
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/**/*.html"],
+  darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
@@ -52,8 +53,8 @@ export default {
           modal: "#000000",
         },
         background: {
-          primary: { dark: "#39394B", light: "#39394B" },
-          secondary: { dark: "#222131", light: "#222131" },
+          primary: { dark: "#39394B", light: "#ffffff" },
+          secondary: { dark: "#222131", light: "#f1f4fa" },
         },
         tundraBrown: "#474244",
       },

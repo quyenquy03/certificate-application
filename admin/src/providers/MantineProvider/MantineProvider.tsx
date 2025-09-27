@@ -2,15 +2,18 @@
 
 import { ReactNode } from "react";
 import { MantineProvider as MantineThemeProvider } from "@mantine/core";
+import { THEMES } from "@/enums";
 
 type MantineProviderProps = {
   children: ReactNode;
+  theme: THEMES;
 };
 
-export const MantineProvider = ({ children }: MantineProviderProps) => {
+export const MantineProvider = ({ children, theme }: MantineProviderProps) => {
   return (
     <MantineThemeProvider
-      defaultColorScheme="dark"
+      defaultColorScheme={theme}
+      forceColorScheme={theme as any}
       withCssVariables
       theme={{
         colors: {

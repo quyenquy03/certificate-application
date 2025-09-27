@@ -5,6 +5,8 @@ import "./globals.css";
 
 import { ColorSchemeScript, mantineHtmlProps } from "@mantine/core";
 import { AppLayout } from "@/layouts";
+import { ThemeProvider } from "@/providers";
+import { THEMES } from "@/enums";
 // import { AppLayout } from "@/layouts";
 
 const geistSans = Geist({
@@ -33,9 +35,11 @@ export default function RootLayout({
         <ColorSchemeScript defaultColorScheme="dark" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background-secondary-dark`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background-secondary-light dark:bg-background-secondary-dark`}
       >
-        <AppLayout>{children}</AppLayout>
+        <ThemeProvider defaultTheme={THEMES.AUTO}>
+          <AppLayout>{children}</AppLayout>
+        </ThemeProvider>
       </body>
     </html>
   );

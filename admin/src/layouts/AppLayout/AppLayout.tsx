@@ -1,4 +1,11 @@
-import { LocaleProvider, MantineProvider } from "@/providers";
+"use client";
+
+import {
+  LocaleProvider,
+  MantineProvider,
+  ThemeProvider,
+  useTheme,
+} from "@/providers";
 import { ReactNode } from "react";
 
 type AppLayoutProps = {
@@ -6,8 +13,9 @@ type AppLayoutProps = {
 };
 
 export const AppLayout = ({ children }: AppLayoutProps) => {
+  const { theme } = useTheme();
   return (
-    <MantineProvider>
+    <MantineProvider theme={theme}>
       <LocaleProvider>{children}</LocaleProvider>
     </MantineProvider>
   );
